@@ -23,18 +23,6 @@ O pipeline foi desenhado seguindo as melhores práticas de engenharia de dados, 
 
 •Carga: Persistência dos dados transformados em arquivos CSV em um volume compartilhado entre o container e a máquina local.
 
-📂 Estrutura de Pastas
-
-.
-├── dags/               # Definição da DAG do Airflow
-├── pipelines/          # Scripts Python com a lógica de ETL
-├── dados/              # Pasta local onde os CSVs são salvos (Volume Docker)
-├── docker-compose.yaml # Configuração da infraestrutura Airflow
-├── .env.example        # Modelo de variáveis de ambiente
-└── requirements.txt    # Dependências do projeto
-
-
-
 🚀 Como Executar
 
 Pré-requisitos
