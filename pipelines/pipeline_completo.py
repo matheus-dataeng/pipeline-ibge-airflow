@@ -27,9 +27,15 @@ def transform_ibge(df):
 def load_ibge(df_ufs, df_regioes):
     caminho_pasta = os.getenv("PATH_DADOS")
     os.makedirs(caminho_pasta, exist_ok=True)
+
+    arquivo_uf = "Ufs.csv"
+    arquivo_regioes = "Regioes.csv"
+
+    caminho_geral_uf = os.path.join(caminho_pasta, arquivo_uf)
+    caminho_geral_regioes = os.path.join(caminho_pasta, arquivo_regioes)
     
-    df_ufs.to_csv(os.path.join(caminho_pasta, "Ufs.csv"), index=False)
-    df_regioes.to_csv(os.path.join(caminho_pasta, "Regioes.csv"), index=False)
+    df_ufs.to_csv(caminho_geral_uf, index=False)
+    df_regioes.to_csv(caminho_geral_regioes, index=False)
 
 def pipeline():
     dados_brutos = extract_ibge()
