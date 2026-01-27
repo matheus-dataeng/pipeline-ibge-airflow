@@ -1,0 +1,7 @@
+notbooks_apoio
+.env
+logs
+config
+dados
+DS_Store
+__pycache__
